@@ -1,0 +1,117 @@
+.page {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	background-color: $pale-blue;
+	background-image: url('../images/pattern-background-desktop.min.svg');
+	background-repeat: no-repeat;
+	background-size: 100% 50%;
+
+	.container {
+		background-color: white;
+		height: 95%;
+		max-width: 45rem;
+		border-radius: 3rem;
+		text-align: center;
+		box-shadow: 0 1.6rem 1rem rgb(56, 41, 224, .15);
+
+		.hero-section {
+			&__image img {
+				width: 100%;
+				height: 100%;
+				border-top-left-radius: 3rem;
+				border-top-right-radius: 3rem;
+			}
+			&__title {
+				margin-top: 5rem;
+			}
+		}
+
+		.order-details {
+			margin-top: 3rem;
+			display: grid;
+			justify-items: center;
+
+			&__caption {
+				color: $gray-500;
+				width: 80%;
+				line-height: 1.7;
+
+			}
+
+			&__item {
+				width: 70%;
+				margin-top: 1.6rem;
+				display: grid;
+				grid-template-columns: 7rem 1fr 6rem;
+				align-items: center;
+				padding: 1.6rem;
+				background-color: $very-pale-blue;
+				border-radius: 1rem;
+
+				&-price {
+					justify-self: flex-start;
+
+					.item-price__description {
+						margin: .8rem 0;
+					}
+					.item-price__price {
+						color: $gray-500
+					}
+				}
+
+				#btn-change {
+					font-size: smaller;
+				}
+			}
+		}
+
+		.button-section {
+			margin-top: 1.6rem;
+			display: grid;
+			justify-items: center;
+
+			button {
+				width: 70%;
+				height: 5rem;
+				margin: 1rem;
+				border-style: none;
+				border-radius: 1rem;
+			}
+			
+			#proceed {
+				font-weight: 700;
+				background-color: $bright-blue;
+				color: white;
+				box-shadow: 0 1.6rem 1rem rgb(56, 41, 224, .15);
+
+			}
+			
+			#cancel {
+				font-weight: 500;
+				background-color: rgba(0, 0, 0, 0);
+			}
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.page {
+		background-color: $pale-blue;
+		background-image: url('../images/pattern-background-mobile.min.svg');
+		background-repeat: no-repeat;
+		background-size: 100% 50%;
+
+		.container {
+			height: 85%;
+			max-width: 34rem;
+
+			.hero-section {
+				&__title {
+					margin-top: 3rem;
+				}
+			}
+		}
+	}
+}

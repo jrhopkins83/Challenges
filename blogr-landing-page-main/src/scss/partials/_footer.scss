@@ -1,0 +1,16 @@
+footer {
+  background-color: #333;
+  padding: em(20);
+  &__attribution { font-size: 11px; text-align: center; }
+  &__attribution a { color: hsl(228, 45%, 44%); }
+}
+
+.footer {
+  &__title {
+    color: white;
+    font-weight: 900;
+  }
+  &__p {
+    color: white;
+  }
+}
