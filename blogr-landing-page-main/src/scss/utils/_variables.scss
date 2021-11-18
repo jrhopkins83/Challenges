@@ -10,20 +10,32 @@ $gray-600: #6c757d !default;
 $gray-800: #343a40;
 
 // Primary
-$pale-blue: rgb(224, 232, 255);
-$bright-blue: rgb(56, 41, 224);
+$very-light-blue: #1f3f5b;
+
+// Used in linear gradients
+$light-red: #ff3d54;
+$very-light-red: #ff6f47;
+$very-dark-gray-blue: #2c2d3f;
+$very-dark-desaturated-blue: #3f4164;
+
 
 //Neutral
-$very-pale-blue: rgb(245, 247, 255);
-$desaturated-blue: rgb(114, 128, 167);
-$dark-blue: rgb(31, 47, 86);
+$white: #ffffff;
+$greyish-blue: #c8c8cb;
+$very-dark-grayish-blue: #4b5862;
+$very-dark-black-blue: #25252d;
 
 // 
 // Fonts
 // 
 
-$font-family-base: 'Red Hat Display', serif;;
+$font-family-base: 'Overpass', sans-serif;;
+$font-family-menu: 'Ubuntu', serif;;
 
-$h1-font-size: 3rem;
-$h2-font-size: 1.6rem;
-$h3-font-size: 1rem;
+$h1-font-desktop-size: 6.4rem;
+$h2-font-desktop-size: 3.8rem;
+$h3-font-desktop-size: 2.8rem;
+
+$h1-font-mobile-size: 3.8rem;
+$h2-font-mobile-size: 2.8rem;
+$h3-font-mobile-size: 1.8rem;

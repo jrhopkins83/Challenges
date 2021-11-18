@@ -1,11 +1,13 @@
-footer {
-  background-color: #333;
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(206, 197, 197);
   padding: em(20);
   &__attribution { font-size: 11px; text-align: center; }
   &__attribution a { color: hsl(228, 45%, 44%); }
-}
 
-.footer {
   &__title {
     color: white;
     font-weight: 900;

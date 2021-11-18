@@ -1,99 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+		<!-- Google fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<!-- Fontawesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Blogr]</title>
+		<!-- Compiled & Minified css-->
+		<link rel="stylesheet" href="css/main.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Product
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
 
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
+		<script
+			src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+			crossorigin="anonymous"
+		></script>
 
-  Company
+		<title>Frontend Mentor | [Blogr]</title>
+	</head>
+	<body>
+		<div class="page-container">
+			<div class="hero-section">
+				<div class="nav-bar">
+					<div class="nav-bar__logo">
+						<img src="images/logo.svg" alt="Blogr Logo" />
+					</div>
+					<div class="nav-bar__menu-bar">
+						<div role="navigation" class="nav-bar__menu-bar--main">
+							<ul>
+								<li class="dropdown main-item"><a href="#">Product</a></li>
+								<li class="dropdown main-item"><a href="#">Company</a></li>
+								<li class="dropdown">
+									<a href="javascript:void(0)" class="dropbtn">Connect</a>
+									<div class="dropdown-content">
+										<a href="#">Contact</a>
+										<a href="#">NewsLetter</a>
+										<a href="#">LinkedIn</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="nav-bar__menu-bar--login-signup">
+							<ul class="button-group">
+								<li class=""><a href="#">Login</a></li>
+								<li class="active"><a href="#">Sign Up</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="cta">
+					<div class="cta__tagline">
+						<h1 class="tagline__main">A modern publishing platform</h1>
+						<div class="tagline__sub">Grow your audience and build your online brand</div>
+					</div>
+					<div class="cta__buttons">
+						<ul class="button-group">
+							<li class="active"><a href="#">Start for Free</a></li>
+							<li class=""><a href="#">Learn More</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer__attribution">
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="#">Roger Hopkins</a>.
+			</div>
+		</div>
+		<!-- <script src="js/index.js"></script> -->
+		<script>
+			const dropdowns = document.getElementsByClassName('dropdown')
 
-  About
-  Team
-  Blog
-  Careers
+			for (let i = 0; i < dropdowns.length; i++) {
+				dropdowns[i].addEventListener('click', function () {
+					const dropdownContent = this.childNodes[3]
+					dropdownContent.classList.toggle('active')
+				})
+			}
 
-  Connect
+			const buttonGroups = document.getElementsByClassName('button-group')
 
-  Contact
-  Newsletter
-  LinkedIn
-  
-  Login
-  Sign Up
+			function getAllChildren(elem, filter) {
+				var children = []
+				elem = elem.firstChild
+				do {
+					if (elem.nodeType === 3) continue // text node
+					if (!filter || filter(elem)) children.push(elem)
+				} while ((elem = elem.nextSibling))
+				return children
+			}
 
-  A modern publishing platform
-  Grow your audience and build your online brand
-
-  Start for Free
-  Learn More
-
-  Designed for the future
-
-  Introducing an extensible editor
-  Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
-  The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
-  videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
-  change the looks of a blog.
-
-  Robust content management
-  Flexible content management enables users to easily move through posts. Increase the usability of your blog 
-  by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
-
-  State of the Art Infrastructure
-  With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
-  This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-
-  Free, open, simple
-  Blogr is a free and open source application backed by a large community of helpful developers. It supports 
-  features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
-  and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
-
-  Powerful tooling
-  Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-  capable of producing even the most complicated sites.
-
-  Product
-
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
-
-  Company
-
-  About
-  Team
-  Blog
-  Careers
-
-  Connect
-  
-  Contact
-  Newsletter
-  LinkedIn
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+			for (let i = 0; i < buttonGroups.length; i++) {
+				buttonGroups[i].addEventListener('click', function () {
+					const children = getAllChildren (this, null)
+					for (let j = 0; j < children.length; j++) {
+						children[j].classList.toggle('active')
+					}
+				})
+			}
+		</script>
+	</body>
 </html>

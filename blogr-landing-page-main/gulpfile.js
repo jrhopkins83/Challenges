@@ -18,11 +18,21 @@ function compilescss() {
 
 //minify images
 function imgmin () {
-  return src('src/images/*')
+  return src( [
+    'src/images/*.png',
+    'src/images/*.jpg'
+  ] )
     .pipe(imagemin())
     .pipe( rename( { suffix: '.min' } ) )
     .pipe( dest( 'dist/images' ) )
 }
+
+// move SVG images
+function imgSVG(){
+  return src('./images/*.svg') // change to your source directory
+    .pipe(dest('dist/images')); // change to your final/public directory
+}
+
 // minify js
 function jsmin(){
   return src( [
@@ -32,9 +42,10 @@ function jsmin(){
     .pipe(dest('dist/js')); // change to your final/public directory
 }
 
+
 // move html
 function html(){
-  return src('./*.html') // change to your source directory
+  return src('./index.html') // change to your source directory
     .pipe(dest('dist/')); // change to your final/public directory
 }
 
@@ -42,8 +53,9 @@ function html(){
 function watchTask(){
   watch('src/scss/**/*.scss', compilescss); // change to your source directory
   watch('src/images/*', imgmin); // change to your source directory
+  watch('src/images/*', imgSVG); // change to your source directory
   watch('src/js/*.js', jsmin); // change to your source directory
-  watch("./index.html", html);; // change to your source directory
+  watch("./index.html", html); // change to your source directory
 }
 
 // Default Gulp task 
@@ -51,6 +63,7 @@ exports.default = series(
     compilescss,
     jsmin,
     imgmin,
+    imgSVG,
     html,
     watchTask
 )
