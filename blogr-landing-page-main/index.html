@@ -41,7 +41,11 @@
 					<div class="nav-bar__logo">
 						<img src="images/logo.svg" alt="Blogr Logo" />
 					</div>
-					<div class="nav-bar__menu-bar">
+					<input type="checkbox" name="nav" class="nav-bar__nav-toggle" />
+					<div class="nav-bar__menu-button">
+						<div class="navbar_opener"></div>
+					</div>
+					<div class="nav-bar__menu-bar" id="main-menu">
 						<div role="navigation" class="nav-bar__menu-bar--main">
 							<ul>
 								<li class="dropdown main-item"><a href="#">Product</a></li>
@@ -56,6 +60,7 @@
 								</li>
 							</ul>
 						</div>
+						<div class="horizontal-divider"></div>
 						<div class="nav-bar__menu-bar--login-signup">
 							<ul class="button-group">
 								<li class=""><a href="#">Login</a></li>
@@ -66,8 +71,8 @@
 				</div>
 				<div class="cta">
 					<div class="cta__tagline">
-						<h1 class="tagline__main">A modern publishing platform</h1>
-						<div class="tagline__sub">Grow your audience and build your online brand</div>
+						<div class="cta__tagline--main">A modern publishing platform</div>
+						<div class="cta__tagline--sub">Grow your audience and build your online brand</div>
 					</div>
 					<div class="cta__buttons">
 						<ul class="button-group">
@@ -92,8 +97,16 @@
 
 			for (let i = 0; i < dropdowns.length; i++) {
 				dropdowns[i].addEventListener('click', function () {
+					this.classList.toggle('active')
+					if (this.childNodes.length > 1) {
 					const dropdownContent = this.childNodes[3]
 					dropdownContent.classList.toggle('active')
+						if (dropdownContent.style.display === 'block') {
+						dropdownContent.style.display = 'none'
+					} else {
+						dropdownContent.style.display = 'block'
+					}
+				}				
 				})
 			}
 
