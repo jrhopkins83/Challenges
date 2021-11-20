@@ -1,3 +1,106 @@
 .features-1	{
+	color: $very-light-blue;
+
+	&__heading {
+		font-weight: 600;
+	}
+	&__blurbs {
+		
+		&--heading,
+		&--heading-2nd {
+			font-weight: 600;
+		}
+
+		&--blurb {
+			font-size: 1.6rem;
+			line-height: 2.8rem;
+		}
+	}
+}
+
+// For mobile devices
+@media screen and (max-width: 955px) {
+	.features-1 {
+		text-align: center;
+		
+		&__heading {
+			margin-top: 10rem;
+			font-size: $h2-font-mobile-size;
+			letter-spacing: -.84px;
+		}	
+		
+		&__image {
+			margin: 2.3rem auto;
+			img {
+				width: 94%;
+				display: block;
+				content: url('/images/illustration-editor-mobile.svg');
+			}
+		}
+		
+		&__blurbs {
+			margin: 2.3rem auto;
+			width: 90%;
+			text-align: center;
+			
+			&--heading,
+			&--heading-2nd {
+				width: 84%;
+				margin: .8rem auto;
+				font-size: $h2-font-mobile-size;
+			}
+
+			&--heading-2nd {
+					margin: 3.2rem auto .8rem auto;
+			}
+			
+			&--blurb {
+				margin: .8rem auto;
+			}
+		}
+	}
+}
+
+// For tablets and desktoops
+@media (min-width: 956px) {
+	.features-1 {
+		margin-top: 10rem;
+		height: 88.5rem;
+		background-image: url('/images/illustration-editor-desktop.svg');
+		background-size: 70%;
+		background-position: 200% 0;
+		background-repeat: no-repeat;
+
+		&__heading {
+			position: relative;
+			top: 5%;
+			margin-top: 5rem;
+			margin-bottom: 10rem;
+			font-size: $h2-font-desktop-size;
+			font-weight: 600;
+			text-align: center;
+		}	
+		&__blurbs {
+			text-align: left;
+			margin: 6.4rem 16.5rem ;
+			max-width: 51rem;
+			
+			&--heading,
+			&--heading-2nd {
+				width: 100%;
+				margin-top: 5rem;
+				font-size: $h3-font-desktop-size;
+			}
+
+			&--heading-2nd {
+					margin: 3.2rem auto .8rem auto;
+			}
+			
+			&--blurb {
+				margin: .8rem auto;
+				letter-spacing: .5px;
+			}
+		}
 	
+	}
 }
