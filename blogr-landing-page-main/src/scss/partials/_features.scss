@@ -60,16 +60,21 @@
 	&__heading {
 		font-weight: 600;
 	}
-	&__blurbs {
+	
+	.feature-blurbs {
 		
-		&--heading,
-		&--heading-2nd {
-			font-weight: 600;
-		}
-		
-		&--blurb {
-			font-size: 1.6rem;
-			line-height: 2.8rem;
+		&__blurb {
+
+			&--heading,
+			&--heading-2nd {
+				font-weight: 600;
+			}
+			
+			&--para {
+				font-size: 1.6rem;
+				line-height: 2.8rem;
+				letter-spacing: .5px;
+			}
 		}
 	}
 }
@@ -156,7 +161,7 @@
 			}
 		}
 		
-		.features-blurbs {
+		.feature-blurbs {
 			margin: 2.3rem auto;
 			width: 75%;
 			text-align: center;
@@ -286,17 +291,10 @@
 					width: 100%;
 					margin: 1.6rem auto;
 					font-size: $h3-font-desktop-size;
-					font-weight: 600;
 				}
-				
-				// &--heading-2nd {
-				// 	margin: 3.2rem auto .8rem auto;
-				// }
 				
 				&--para {
 					margin: .8rem auto;
-					line-height: 2.8rem;
-					letter-spacing: .5px;
 				}
 			}
 		}
