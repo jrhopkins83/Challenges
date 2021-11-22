@@ -1,6 +1,7 @@
 .features-1	{
+	display: none;
 	color: $very-light-blue;
-
+	
 	&__heading {
 		font-weight: 600;
 	}
@@ -10,7 +11,62 @@
 		&--heading-2nd {
 			font-weight: 600;
 		}
+		
+		&--blurb {
+			font-size: 1.6rem;
+			line-height: 2.8rem;
+		}
+	}
+}
 
+.features-2 {
+	display: none;
+	color: $white;
+	background-image: linear-gradient(135deg, #2D2E40 0%, #3F4164 100%);
+	background-repeat: no-repeat;
+	border-radius: 0 10rem;
+	
+	img {
+		position: absolute;
+		max-width: 100%;
+		height: auto;
+	}
+
+	.feature-blurbs {
+		background-image: url('/images/bg-pattern-circles.svg');
+		background-repeat: no-repeat;
+		border-radius: 0 10rem;
+		z-index: 1;
+		
+		&__blurb {
+			&--heading {
+				font-size: 4rem;
+				line-height: 5rem;
+				letter-spacing: -1.2px;
+			}
+	
+			&--para {
+				line-height: 2.8rem;
+				letter-spacing: .5px;
+			}
+		}
+	}
+
+}
+
+.features-3	{
+	color: $very-light-blue;
+	
+	&__heading {
+		font-weight: 600;
+	}
+	&__blurbs {
+		
+		&--heading,
+		&--heading-2nd {
+			font-weight: 600;
+		}
+		
 		&--blurb {
 			font-size: 1.6rem;
 			line-height: 2.8rem;
@@ -34,7 +90,7 @@
 			img {
 				width: 94%;
 				display: block;
-				content: url('/images/illustration-editor-mobile.svg');
+				content: url('/images/illustration-editor-desktop.svg');
 			}
 		}
 		
@@ -59,6 +115,71 @@
 			}
 		}
 	}
+
+	.features-2 {
+		min-height: 62.5rem;
+		margin: 25rem 0 18rem;
+
+		img {
+			top: -20rem;
+		}
+
+		.feature-blurbs {
+			text-align: center;
+			background-size: 160%;
+			background-position-x: -12rem;
+			background-position-y: -28rem;
+			
+			&__blurb {
+				&--heading {
+					padding: 22rem 6% 1.5rem;
+					margin-bottom: 3rem;
+				}
+
+				&--para {
+					padding: 1.5rem 6%;
+				}
+		}
+		}
+
+	}
+	
+	.features-3 {
+		text-align: center;
+		
+		.feature-image {
+			margin: 2.3rem auto;
+			img {
+				width: 94%;
+				display: block;
+				content: url('/images/illustration-laptop-mobile.svg');
+			}
+		}
+		
+		.features-blurbs {
+			margin: 2.3rem auto;
+			width: 75%;
+			text-align: center;
+			
+			&__blurb {
+				&--heading,
+				&--heading-2nd {
+					width: 84%;
+					margin: .8rem auto;
+					font-size: $h2-font-mobile-size;
+				}
+	
+				&--heading-2nd {
+						margin: 3.2rem auto .8rem auto;
+				}
+				
+				&--blurb {
+					margin: .8rem auto;
+				}
+			}
+		} 
+	}
+
 }
 
 // For tablets and desktoops
@@ -103,4 +224,83 @@
 		}
 	
 	}
+
+	.features-2 {
+		height: 40rem;
+		margin: 25rem 0 18rem;
+
+		img {
+			top: -7rem;
+			left: 10%;
+		}
+
+		.feature-blurbs {
+			height: 100% ;
+			text-align: center;
+			background-size: 70%;
+			background-position-x: -50%;
+			background-position-y: 80%;
+			
+			&__blurb {
+				max-width: 51rem;
+				position: absolute;
+				top: 25%;
+				left: 50%;
+
+				&--heading {
+					margin-bottom: 3rem;
+				}
+	
+				&--para {
+					text-align: left;
+				}
+			}
+
+		}
+
+	}
+
+	.features-3 {
+		margin-top: 10rem;
+		height: 78.5rem;
+		background-image: url('/images/illustration-laptop-desktop.svg');
+		background-size: 70%;
+		background-position-x: -65%;
+		background-repeat: no-repeat;
+
+		.feature-image {
+			display: none;
+		}
+		
+		.feature-blurbs {
+			max-width: 51rem;
+			position: absolute;
+			top: 22%;
+			left: 52%;
+			
+			&__blurb {
+				margin-bottom: 6.4rem;
+
+				&--heading,
+				&--heading-2nd {
+					width: 100%;
+					margin: 1.6rem auto;
+					font-size: $h3-font-desktop-size;
+					font-weight: 600;
+				}
+				
+				// &--heading-2nd {
+				// 	margin: 3.2rem auto .8rem auto;
+				// }
+				
+				&--para {
+					margin: .8rem auto;
+					line-height: 2.8rem;
+					letter-spacing: .5px;
+				}
+			}
+		}
+	
+	}
+
 }
