@@ -1,10 +1,14 @@
 .features-1	{
-	display: none;
 	color: $very-light-blue;
 	
 	&__heading {
 		font-weight: 600;
 	}
+
+	&__image {
+		display: none;
+	}
+	
 	&__blurbs {
 		
 		&--heading,
@@ -20,7 +24,6 @@
 }
 
 .features-2 {
-	display: none;
 	color: $white;
 	background-image: linear-gradient(135deg, #2D2E40 0%, #3F4164 100%);
 	background-repeat: no-repeat;
@@ -28,7 +31,7 @@
 	
 	img {
 		position: absolute;
-		max-width: 100%;
+		min-width: 47rem;
 		height: auto;
 	}
 
@@ -191,7 +194,7 @@
 @media (min-width: 956px) {
 	.features-1 {
 		margin-top: 10rem;
-		height: 88.5rem;
+		height: 54rem;
 		background-image: url('/images/illustration-editor-desktop.svg');
 		background-size: 70%;
 		background-position: 200% 0;
@@ -231,6 +234,7 @@
 	}
 
 	.features-2 {
+		position: relative;
 		height: 40rem;
 		margin: 25rem 0 18rem;
 
@@ -266,6 +270,7 @@
 	}
 
 	.features-3 {
+		position: relative;
 		margin-top: 10rem;
 		height: 78.5rem;
 		background-image: url('/images/illustration-laptop-desktop.svg');
