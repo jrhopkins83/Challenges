@@ -24,6 +24,7 @@
 }
 
 .features-2 {
+	position: relative;
 	color: $white;
 	background-image: linear-gradient(135deg, #2D2E40 0%, #3F4164 100%);
 	background-repeat: no-repeat;
@@ -58,6 +59,7 @@
 }
 
 .features-3	{
+	position: relative;
 	color: $very-light-blue;
 	
 	&__heading {
@@ -128,8 +130,15 @@
 		min-height: 62.5rem;
 		margin: 25rem 0 18rem;
 
-		img {
-			top: -20rem;
+		.feature-image {
+			width: 75%;
+			img {
+				width: 41rem;
+				height: 38rem;
+				top: -20rem;
+				left: -6rem;
+				object-fit: contain;
+			}
 		}
 
 		.feature-blurbs {
