@@ -15,5 +15,8 @@
 .DS_Store
 .prettierignore
 
-# Node modules
+# Other
+dist
+dist/css
+design
 node_modules
