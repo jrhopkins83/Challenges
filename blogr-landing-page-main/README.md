@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/jrhopkins83/Challenges/tree/master/blogr-landing-page-main)
-- Live Site URL: [Add live site URL here](https://jrhopkins83-challenges-blogr-page.netlify.app/)
+- Solution URL: [Solution URL](https://github.com/jrhopkins83/Challenges/tree/master/blogr-landing-page-main)
+- Live Site URL: [Live site URL](https://jrhopkins83-challenges-blogr-page.netlify.app/)
 
 ## My process
 1. Downloaded all the files including the Figma file
