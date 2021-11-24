@@ -48,6 +48,7 @@ focust on the current section.
 
 - Semantic HTML5 markup
 - Scss and CSS custom properties
+- Javascript (just for the 'hero section' menu)
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
