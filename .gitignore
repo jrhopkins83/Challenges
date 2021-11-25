@@ -3,6 +3,8 @@ blogr-landing-page-main/index-orginal.html
 blogr-landing-page-main/dist/css/main.css
 Design-files
 My-Portfolio-main
+Insurance-landing-page
 
 # Local Netlify folder
 .netlify
+insurance-landing-page/node_modules

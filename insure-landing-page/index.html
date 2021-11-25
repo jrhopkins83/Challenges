@@ -2,112 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <!-- Google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Fontawesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <script
+    src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous">
+  </script>
+
+  <!-- Compiled & Minified css-->
+  <link rel="stylesheet" href="css/main.css" />
 
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   
   <title>Frontend Mentor | Insure landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-  <div class="navbar">
-    <div class="navbar__logo"></div>
-    <nav class="navbar__main">
-      <li>How we work</li>
-      <li>Blog</li>
-      <li>Account</li>
-      <li>View plans</li>
-    </nav>
-  </div>
-  <section class="hero">
-    <div class="hero__tagline">Humanizing your insurance.</div>
-    <div class="hero__blurb">
-      Get your life insurance coverage easier and faster. We blend our expertise 
-      and technology to help you find the plan that’s right for you. Ensure you 
-      and your loved ones are protected.
-    </div>
-    <button>View plans</button>
-  </section>
-  <section class="difference">
-    <div class="difference__heading">We’re different</div>
-    <div class="difference__cards">
-      <div class="difference__cards--card-1">
-        <div class="image"></div>
-        <div class="title">Snappy Process</div>
-        <div class="blurb">
-          Our application process can be completed in minutes, not hours. Don’t get 
-  stuck filling in tedious forms.
+  <div class="page-container">
+    <div class="navbar">
+      <div class="navbar__logo">
+        <img src="images/logo.svg" alt="Blogr Logo" />
+      </div>
+      <div class="navbar__nav-toggle">
+        <input type="checkbox" class="navbar__nav-toggle--checkbox" />
+        <div class="navbar__nav-toggle--menu-button">
+          <div class="navbar_opener"></div>
         </div>
       </div>
-      <div class="difference__cards--card-2">
-        <div class="image"></div>
-        <div class="title">Affordable Prices</div>
-        <div class="blurb">
-          We don’t want you worrying about high monthly costs. Our prices may be low, 
-  but we still offer the best coverage possible.
-        </div>
-      </div>
-      <div class="difference__cards--card-3">
-        <div class="image"></div>
-        <div class="title">People First</div>
-        <div class="blurb">
-          Our plans aren’t full of conditions and clauses to prevent payouts. We make 
-  sure you’re covered when you need it.
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="how-we-work">
-    <div class="how-we-work__heading">How we work</div>
-  </section>
-  <div class="footer-container">
-    
-    <section class="footer">
-      <div class="footer__logo"></div>
-      <div class="footer__links">
-        <div class="footer__links--header">Our company</div>
-        <ul class="footer__links--items">
+      <nav class="navbar__menu-bar">
+        <ul>
           <li>How we work</li>
-          <li>Why Insure?</li>
+          <li>Blog</li>
+          <li>Account</li>
           <li>View plans</li>
-          <li>Reviews</li>
         </ul>
+      </nav>
+    </div>
+    <section class="hero">
+      <div class="hero__tagline">Humanizing your insurance.</div>
+      <div class="hero__blurb">
+        Get your life insurance coverage easier and faster. We blend our expertise 
+        and technology to help you find the plan that’s right for you. Ensure you 
+        and your loved ones are protected.
       </div>
-      <div class="footer__links">
-        <div class="footer__links--header">Help me</div>
-        <ul class="footer__links--items">
-          <li>FAQ</li>
-          <li>Terms of use</li>
-          <li>Privacy Policy</li>
-          <li>Cookies</li>
-        </ul>
-      </div>
-      <div class="footer__links">
-        <div class="footer__links--header">Contact</div>
-        <ul class="footer__links--items">
-          <li>Sales</li>
-          <li>Support</li>
-          <li>Live chat</li>
-        </ul>
-      </div>
-      <div class="footer__links">
-        <div class="footer__links--header">Others</div>
-        <ul class="footer__links--items">
-          <li>Careers</li>
-          <li>Press</li>
-          <li>Licenses</li>
-        </ul>
+      <button>View plans</button>
+    </section>
+    <section class="difference">
+      <div class="difference__heading">We’re different</div>
+      <div class="difference__cards">
+        <div class="difference__cards--card-1">
+          <div class="image"></div>
+          <div class="title">Snappy Process</div>
+          <div class="blurb">
+            Our application process can be completed in minutes, not hours. Don’t get 
+    stuck filling in tedious forms.
+          </div>
+        </div>
+        <div class="difference__cards--card-2">
+          <div class="image"></div>
+          <div class="title">Affordable Prices</div>
+          <div class="blurb">
+            We don’t want you worrying about high monthly costs. Our prices may be low, 
+    but we still offer the best coverage possible.
+          </div>
+        </div>
+        <div class="difference__cards--card-3">
+          <div class="image"></div>
+          <div class="title">People First</div>
+          <div class="blurb">
+            Our plans aren’t full of conditions and clauses to prevent payouts. We make 
+    sure you’re covered when you need it.
+          </div>
+        </div>
       </div>
     </section>
-  </div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Roger Hopkins</a>.
+    <section class="how-we-work">
+      <div class="how-we-work__heading">How we work</div>
+    </section>
+    <div class="footer-container">
+      
+      <section class="footer">
+        <div class="footer__logo"></div>
+        <div class="footer__links">
+          <div class="footer__links--header">Our company</div>
+          <ul class="footer__links--items">
+            <li>How we work</li>
+            <li>Why Insure?</li>
+            <li>View plans</li>
+            <li>Reviews</li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <div class="footer__links--header">Help me</div>
+          <ul class="footer__links--items">
+            <li>FAQ</li>
+            <li>Terms of use</li>
+            <li>Privacy Policy</li>
+            <li>Cookies</li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <div class="footer__links--header">Contact</div>
+          <ul class="footer__links--items">
+            <li>Sales</li>
+            <li>Support</li>
+            <li>Live chat</li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <div class="footer__links--header">Others</div>
+          <ul class="footer__links--items">
+            <li>Careers</li>
+            <li>Press</li>
+            <li>Licenses</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Roger Hopkins</a>.
+    </div>
   </div>
 </body>
 </html>

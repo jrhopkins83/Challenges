@@ -1,0 +1,64 @@
+// app global css in SCSS form
+* {
+  text-decoration: none;
+} 
+
+html {
+  // This defines what 1rem is: 10px
+  font-size: 62.5%;
+  //Font-family
+  font-family: $font-family-base;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: $white;
+}
+
+h1 {
+  line-height: 1;
+  font-size: $h1-font-desktop-size;
+  font-weight: 900;
+}
+
+h2 {
+  line-height: 1;
+  font-size: $h2-font-desktop-size;
+  font-weight: 700;
+}
+
+h3 {
+  line-height: 1;
+  font-size: $h2-font-desktop-size;
+  font-weight: 700;
+}
+
+nav, button {
+  font-family: $font-family-base;
+}
+
+//Full width
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.page-container {
+  max-width: 144rem;
+  width: 100%;
+  margin: auto;
+}
+
+// Animations //
+@keyframes animUpFromBottom {
+	0% {
+		top: 200px;
+	}
+	100% {
+		top: 0px;
+	}
+}
+
