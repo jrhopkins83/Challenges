@@ -1,31 +1,56 @@
 .footer-container {
-  background-color: #24242C;
-  border-radius: 0 10rem 0 0;
-  color: $white;
+  text-align: center;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-color: #FAFAFA;
   
   .footer {
-    padding: 7rem 15rem;
-    display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(25rem, 1fr) );
-  
-    &__logo {
-      width: 10rem;
-    }
-  
-    &__links {
-      &--header {
-        font-weight: 600;
+    
+    &__logo-bar {
+      display: grid;
+      justify-content: space-between;
+      &--logo {
+        width: 11rem;
       }
-  
-      &--items {
-        padding: 0;
-        li {
-          padding: .5rem 0;
-          list-style: none;
-          &:hover {
-            text-decoration: underline;
+      &--social {
+        display: flex;
+
+        svg  {
+          width: 2.4rem;
+          color: $dark-grayish-violet;
+
+          &:active {
+            color: $dark-violet
           }
+        }
+      }
+    } 
+    
+    &__links {
+      text-transform: uppercase;
+      border-top: 1px solid #dadada;
+      display: grid;
+      grid-template-columns: repeat( auto-fit, minmax(25rem, 1fr) );
+      
+      &--card {
+        .header {
+          color: $dark-grayish-violet;
+          font-weight: 400;
+        }
+    
+        .items {
+          padding: 0;
+          color: $dark-violet;
   
+          li {
+            padding: .5rem 0;
+            letter-spacing: 1.5px;
+            list-style: none;
+            &:hover {
+              text-decoration: underline;
+            }
+    
+          }
         }
       }
     }
@@ -33,7 +58,7 @@
 }
 
 .attribution {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -47,16 +72,84 @@
 }
 
 // For mobile devices
-@media screen and (max-width: 955px) {
+@media screen and (max-width: 1080px) {
   .footer-container {
-    padding: 7rem 2.4rem;
+    background-image: url('/images/bg-pattern-footer-mobile.svg');
+    
+    .footer {
+      padding: 7.4rem 2.4rem;
+      text-align: center;
+      justify-items: center;
+      
+      &__logo-bar {
+        grid-template-columns: repeat( auto-fit, minmax(25rem, 1fr) );
+        justify-items: center;
+
+        &--logo {
+          justify-content: stretch;
+          padding: 1.6rem 0;
+        }
+        
+        &--social {
+          padding: 1.6rem 0;
+          .icon {
+            padding: 0 .8rem;
+          }
+        }
+      }
+
+      &__links {
+        margin: 2.4rem 0;
+        padding-top: 2.2rem;
+
+        &--card {
+          padding-top: .4rem;
+
+          .items {
+            margin-block-start: 3.8rem;
+            margin-block-end: 3.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// For larger screen devices
+@media screen and (min-width: 1081px) {
+  .footer-container {
+    height: 39.3rem;
+    padding: 6.4rem 11.5%;
+    background-image: url('/images/bg-pattern-footer-desktop.svg');
 
     .footer {
       padding: 0;
-      text-align: center;
+      text-align: left;
       justify-items: center;
       &__logo, &__links {
         margin-bottom: 3.6rem;
+      }
+      &__logo-bar {
+        grid-template-columns: 1fr 14.4rem;
+        width: 100%;
+        height: 4rem;
+
+        &--social {
+          justify-content: center;
+        }
+      }
+      &__links {
+        margin: 2.4rem 0;
+        padding-top: 2.8rem;
+
+        &--card {
+          padding-top: .4rem;
+
+          .items {
+            margin-block-start: 3.8rem;
+            margin-block-end: 3.8rem;
+          }
+        }
       }
     }
   }

@@ -18,22 +18,19 @@ body {
   background-color: $white;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-family-headings;
+}
+
 h1 {
-  line-height: 1;
-  font-size: $h1-font-desktop-size;
-  font-weight: 900;
+  letter-spacing: -.67px;
 }
 
 h2 {
-  line-height: 1;
-  font-size: $h2-font-desktop-size;
-  font-weight: 700;
-}
-
-h3 {
-  line-height: 1;
-  font-size: $h2-font-desktop-size;
-  font-weight: 700;
+  letter-spacing: -.39px;
 }
 
 nav, button {
@@ -62,3 +59,36 @@ nav, button {
 	}
 }
 
+// Media queries for all components
+
+// For mobile devices
+@media screen and (max-width: 1080px) {
+  h1 {
+    font-size: $h1-font-mobile-size;
+  }
+
+  h2 {
+    font-size: $h2-font-mobile-size;
+  }
+
+  h3 {
+    font-size: $h3-font-mobile-size;
+  }
+
+}
+
+// For larger screen devices
+@media screen and (min-width: 1081px) {
+  h1 {
+    font-size: $h1-font-desktop-size;
+  }
+
+  h2 {
+    font-size: $h2-font-desktop-size;
+  }
+
+  h3 {
+    font-size: $h3-font-desktop-size;
+  }
+    
+}

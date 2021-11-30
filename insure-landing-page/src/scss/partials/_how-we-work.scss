@@ -1,0 +1,70 @@
+section.how-we-work {
+	padding: 4.9rem 8%;
+	color: $white;
+	background-color: $dark-violet;
+	background-repeat: no-repeat;
+	background-position: top right;
+
+	h1 {
+		font-weight: 400;
+		line-height: 1;
+	}
+
+	button {
+		width: 16rem;
+		height: 4rem;
+		border: 2px solid $white;
+		color: $white;
+		background-color: $very-dark-violete;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+	
+		&:active, &:hover {
+			color:  #2C2830;
+			background-color: $white;
+		}
+	}
+}
+
+// For mobile devices
+@media screen and (max-width: 1080px) {
+
+	.how-we-work {
+		margin: 1rem 2.4rem 14rem;
+		background-image: url('/images/bg-pattern-how-we-work-mobile.svg');
+		text-align: center;
+
+		h1 {
+			font-size: 4rem;
+			letter-spacing: -.56px;
+		}
+
+		button {
+			margin: auto;
+		}
+	}
+}
+
+
+// For larger screen devices
+@media screen and (min-width: 1081px) {
+	.how-we-work {
+		height: 25rem;
+		margin: 1rem 11.5% 14rem;
+		display: flex;
+		justify-content: space-between;
+		background-image: url('/images/bg-pattern-how-we-work-desktop.svg');
+		
+		h1 {
+			max-width: 47.4rem;
+			font-size: 5.6rem;
+			margin-block-start: 2.4rem;
+			letter-spacing: -.78px;
+		}
+
+		button {
+			margin: auto 0;
+		}
+	}
+
+}
