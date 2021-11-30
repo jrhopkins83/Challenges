@@ -8,3 +8,5 @@ Insurance-landing-page
 # Local Netlify folder
 .netlify
 insurance-landing-page/node_modules
+insure-landing-page/README-template.md
+blogr-landing-page-main/dist/css/main.css
